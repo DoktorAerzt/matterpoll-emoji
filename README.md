@@ -78,6 +78,7 @@ Change parameter in `config.json` as you need them
   "user": {
    "id": "bot",          // The username of an existing Mattermost account
    "password": "botbot"  // The password of an existing Mattermost account
+   "utoken": "4312joifdsu8933u908543218j9" //The token of an existing Mattermost account
  }
 }
 ```
