@@ -71,7 +71,9 @@ func (ps Server) Cmd(w http.ResponseWriter, r *http.Request) {
 }
 
 func (ps Server) login(c *model.Client4) (*model.User, error) {
-	u, apiResponse := c.Login(ps.Conf.User.ID, ps.Conf.User.Password)
+	c.AuthToken = ps.Conf.User.UToken
+	c.AuthType = model.HEADER_BEARER
+	u, apiResponse := c.GetMe("")
 	if apiResponse != nil && apiResponse.StatusCode != 200 {
 		return nil, fmt.Errorf("Error: Login failed. API statuscode: %v", apiResponse.StatusCode)
 	}

@@ -18,6 +18,7 @@ type Conf struct {
 type User struct {
 	ID       string `json:"id"`
 	Password string `json:"password"`
+	UToken   string `json:"utoken"`
 }
 
 // LoadConf loads a configuration file located at path and parse it to a Conf struct
@@ -54,6 +55,9 @@ func (c *Conf) validate() error {
 	}
 	if len(c.User.Password) == 0 {
 		return fmt.Errorf("Config `user.password` is missing")
+	}
+	if len(c.User.UToken) == 0 {
+		return fmt.Errorf("Config `user.utoken` is missing")
 	}
 	return nil
 }
