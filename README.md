@@ -47,7 +47,8 @@ Decompress it and change parameter in `config.json` as you need them
   "token": "9jrxak1ykxrmnaed9cps9i4cim",  // The Token created my Mattermost
   "user": {
    "id": "bot",          // The username of an existing Mattermost account
-   "password": "botbot"  // The password of an existing Mattermost account
+   "password": "botbot",  // The password of an existing Mattermost account
+   "utoken": "4312joifdsu8933u908543218j9" //The token of an existing Mattermost account
  }
 }
 ```
